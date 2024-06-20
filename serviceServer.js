@@ -23,7 +23,8 @@ const locationBasedSearch = require('./api/locationBasedSearch.js');
 const app = express();
 
 app.use(cors({
-    origin: process.env.PAGEURL,
+    // origin: process.env.PAGEURL,
+    origin: '*',
     credentials: true, 
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
