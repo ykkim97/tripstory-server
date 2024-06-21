@@ -24,8 +24,8 @@ const app = express();
 
 app.use(cors({
     // origin: process.env.PAGEURL,
-    // origin: '*',
-    origin: 'https://tripstory.netlify.app',
+    origin: '*',
+    // origin: 'https://tripstory.netlify.app',
     credentials: true, 
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -80,7 +80,9 @@ app.post("/api/users/login", async (req, res) => {
         // 토큰을 쿠키에 저장하고 로그인 성공 응답
         res.cookie("x_auth", token, { 
             // httpOnly: true,
-            sameSite: 'strict'
+            // sameSite: 'strict'
+            sameSite: 'lax',
+            secure: true
         })
         .status(200)
         .json({ 
