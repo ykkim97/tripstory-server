@@ -26,7 +26,7 @@ app.use(cors({
     // origin: process.env.PAGEURL,
     // origin: '*',
     origin: 'https://tripstory.netlify.app',
-    credentials: true, 
+    // credentials: true, 
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
