@@ -83,6 +83,7 @@ app.post("/api/users/login", async (req, res) => {
             // sameSite: 'strict'
             sameSite: 'none',
             // secure: true
+            domain : 'https://tripstory.netlify.app/',
         })
         .status(200)
         .json({ 
