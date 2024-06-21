@@ -24,8 +24,8 @@ const app = express();
 
 app.use(cors({
     // origin: process.env.PAGEURL,
-    // origin: '*',
-    origin: 'https://tripstory.netlify.app',
+    origin: '*',
+    // origin: 'https://tripstory.netlify.app',
     // credentials: true, 
 }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -83,7 +83,7 @@ app.post("/api/users/login", async (req, res) => {
             // sameSite: 'strict'
             sameSite: 'none',
             secure: true,
-            domain : 'tripstory.netlify.app',
+            domain : 'tripstory.netlify.app/',
         })
         .status(200)
         .json({ 
