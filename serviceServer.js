@@ -81,7 +81,7 @@ app.post("/api/users/login", async (req, res) => {
         res.cookie("x_auth", token, { 
             // httpOnly: true,
             // sameSite: 'strict'
-            sameSite: 'None',
+            sameSite: 'none',
             secure: true
         })
         .status(200)
