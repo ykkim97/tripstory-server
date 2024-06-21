@@ -82,7 +82,7 @@ app.post("/api/users/login", async (req, res) => {
             // httpOnly: true,
             // sameSite: 'strict'
             sameSite: 'none',
-            secure: true
+            // secure: true
         })
         .status(200)
         .json({ 
